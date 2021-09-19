@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  database:
+    container_name: "database"
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: animaldb
+    ports:
+      - "3306:3306"
+    restart: always
+    security_opt:
+      - seccomp:unconfined
