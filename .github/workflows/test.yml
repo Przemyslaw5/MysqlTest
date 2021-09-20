@@ -16,5 +16,5 @@ jobs:
           java-version: 15
 
       - name: Test with Gradle
-        run: ./gradlew test
+        run: ./gradlew -b build.gradle test
         working-directory: .
